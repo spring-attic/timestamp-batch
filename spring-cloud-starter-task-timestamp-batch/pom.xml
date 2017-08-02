@@ -58,8 +58,7 @@
                     <generatedProjectHome>
                         ${session.executionRootDirectory}/apps
                     </generatedProjectHome>
-                    <generatedProjectVersion>${project.version}
-                    </generatedProjectVersion>
+                    <generatedProjectVersion>${project.version}</generatedProjectVersion>
                     <bom>
                         <name>scs-bom</name>
                         <groupId>org.springframework.cloud.task.app</groupId>
