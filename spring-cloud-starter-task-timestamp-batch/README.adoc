@@ -12,4 +12,16 @@ The **$$timestamp$$** $$task$$ has the following options:
 $$timestamp.format$$:: $$The timestamp format, "yyyy-MM-dd HH:mm:ss.SSS" by default.$$ *($$String$$, default: `$$yyyy-MM-dd HH:mm:ss.SSS$$`)*
 //end::configuration-properties[]
 
+== Building with Maven
+
+```
+$ ./mvnw clean install -PgenerateApps
+$ cd apps/timestamp-batch-task
+$ ./mvnw clean package
+```
+
+== Example
+```
+java -jar timestamp-batch-task-<version>.jar
+```
 //end::ref-doc[]
