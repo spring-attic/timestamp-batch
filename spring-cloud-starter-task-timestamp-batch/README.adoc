@@ -24,4 +24,9 @@ $ ./mvnw clean package
 ```
 java -jar timestamp-batch-task-<version>.jar
 ```
+
+== Contributing
+
+We welcome contributions! Follow this https://github.com/spring-cloud-task-app-starters/app-starters-release/blob/master/spring-cloud-task-app-starters-
+
 //end::ref-doc[]
