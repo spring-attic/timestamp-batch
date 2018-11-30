@@ -19,7 +19,7 @@ package org.springframework.cloud.task.app.timestamp.batch;
 import org.junit.Test;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.util.EnvironmentTestUtils;
+import org.springframework.boot.test.util.TestPropertyValues;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 
@@ -33,7 +33,8 @@ public class TimestampBatchTaskPropertiesTests {
 	@Test(expected = IllegalArgumentException.class)
 	public void testEmptyFormat() {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-		EnvironmentTestUtils.addEnvironment(context, "timestamp.format:");
+		TestPropertyValues.of("timestamp.format:")
+				.applyTo(context.getEnvironment());
 		context.register(Conf.class);
 		context.refresh();
 		TimestampBatchTaskProperties properties = context.getBean(TimestampBatchTaskProperties.class);
