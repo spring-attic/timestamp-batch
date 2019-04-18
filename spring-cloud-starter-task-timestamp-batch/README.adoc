@@ -25,8 +25,16 @@ $ ./mvnw clean package
 java -jar timestamp-batch-task-<version>.jar
 ```
 
+WARNING: Launching a composed task with timestamp-batch app as it is, more than once, may lead task into ERROR status. 
+This is due to JobInstanceAlreadyCompleteException, as JobInstance won't be unique, if JobParameters remain the same. +
+One of the way to handle this is to utilize JobParametersIncrementer as below: +
+jobBuilderFactory.get("job1").incrementer(new RunIdIncrementer()) +
+jobBuilderFactory.get("job2").incrementer(new RunIdIncrementer()) +
+In this case RunIdIncrementer will allow the app to be launched multiple times, each having its own JobInstance 
+
+
 == Contributing
 
-We welcome contributions! Follow this https://github.com/spring-cloud-task-app-starters/app-starters-release/blob/master/spring-cloud-task-app-starters-
+We welcome contributions! Follow this https://github.com/spring-cloud-task-app-starters/app-starters-release/blob/master/spring-cloud-task-app-starters-docs/src/main/asciidoc/contributing.adoc[link] for more information on how to contribute.
 
 //end::ref-doc[]
