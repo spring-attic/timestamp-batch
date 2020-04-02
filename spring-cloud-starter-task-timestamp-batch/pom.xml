@@ -69,6 +69,7 @@
                     <generatedApps>
                         <timestamp-batch-task/>
                     </generatedApps>
+                    <enableContainerImageMetadata>true</enableContainerImageMetadata>
                 </configuration>
             </plugin>
         </plugins>
