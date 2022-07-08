@@ -1,3 +1,5 @@
+# This repository is no longer actively maintained by VMware, Inc.
+
 # Timestamp Batch Task Application
 
 To learn more about this application and the supported properties, please review the following link.
